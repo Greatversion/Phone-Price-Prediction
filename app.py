@@ -11,6 +11,12 @@ with open('model.pkl', 'rb') as x:
 with open('RMmodel.pkl', 'rb') as y:
     model2 = pickle.load(y)
 
+
+@app.route('/')
+def home():
+    return "Hello, Bachhoooooooooooonnnnn to kaise ho aap log"
+
+
 @app.route('/linear', methods=['POST'])
 def predict_linear():
     data = request.get_json()
